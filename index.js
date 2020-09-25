@@ -55,7 +55,7 @@ function promptUser(answers) {
         {   
             type: "input",
             name: "gitHubUser",
-            message: "What is your GitHub username?",
+            message: "What is your GitHub link?",
         },
         {   
             type: "input",
@@ -72,7 +72,7 @@ function promptUser(answers) {
 }
 
 function generateMarkdown(answers) {
-return `# [Title] 
+return `# ${answers.title}
 ## - Table of Contents
 - [Description](#description)
 - [Installation](#installation)
@@ -95,10 +95,10 @@ ${answers.usage}
 ${answers.contributions}
 
 ## Questions
-If you would like to reach out to me, here are my contact informatioon: 
-GitHub username: [${answers.gitHubUser}](</n>
-Email: ${answers.email}</n>
-LinkedIn Url: ${answers.linkedinUrl}</n>,
+If you would like to reach out to me, here are my contact information:<br> 
+GitHub: [${answers.gitHubUser}](<br>
+Email: ${answers.email}<br>
+LinkedIn Url: ${answers.linkedinUrl}<br>,
 
 
 ## License
