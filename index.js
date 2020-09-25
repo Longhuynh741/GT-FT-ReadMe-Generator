@@ -29,7 +29,7 @@ function promptUser(answers) {
         {   
             type: "input",
             name: "installation",
-            message: "How does a User the application? Write instructions here ",
+            message: "How does a User use the application? Write instructions here ",
         },
 
 
@@ -72,8 +72,8 @@ function promptUser(answers) {
 }
 
 function generateMarkdown(answers) {
-return `# ${answers.title}![<Licnse>](https://img.shields.io/badge/<License>-<${answer.license}>-<Blue>)
-## - Table of Contents
+return `# ${answers.title}![<License>](https://img.shields.io/badge/License-${answers.license}-<Blue>)
+##  Table of Contents
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -99,13 +99,13 @@ ${answers.contributions}
 If you would like to reach out to me, here are my contact information:<br> 
 GitHub: [${answers.gitHubUser}](<br>
 Email: ${answers.email}<br>
-LinkedIn Url: ${answers.linkedinUrl}<br>,
+LinkedIn Url: ${answers.linkedinUrl}<br>
 
 ## Tests
-
+The following tests were done/prompted: ${answers.test}
 ## License
 ${answers.license}
-Copyright (c) [2020] </n>
+Copyright (c) [2020] <br>
 [${answers.name}]
 
 `}
