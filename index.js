@@ -32,11 +32,6 @@ function promptUser(answers) {
             message: "How does a User the application? Write instructions here ",
         },
 
-        {   
-            type: "input",
-            name: "usage",
-            message: "How does a User properly use this application? Write Usage iinstructions here",
-        },
 
         {   
             type: "input",
@@ -48,7 +43,7 @@ function promptUser(answers) {
             type: "list",
             name: "license",
             message: "What license are you using?",
-            choices: [ "MIT", "ISC"]
+            choices: [ "MIT", "ISC", "Other"]
 
         },
 
@@ -56,6 +51,11 @@ function promptUser(answers) {
             type: "input",
             name: "gitHubUser",
             message: "What is your GitHub link?",
+        },
+        {   
+            type: "input",
+            name: "test",
+            message: "Any Tests?",
         },
         {   
             type: "input",
@@ -72,13 +72,14 @@ function promptUser(answers) {
 }
 
 function generateMarkdown(answers) {
-return `# ${answers.title}
+return `# ${answers.title}![<Licnse>](https://img.shields.io/badge/<License>-<${answer.license}>-<Blue>)
 ## - Table of Contents
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributions](#contributions)
 - [License](#license) 
+- [Tests](#test)
 - [Questions](#questions)
     
 ## Description
@@ -100,6 +101,7 @@ GitHub: [${answers.gitHubUser}](<br>
 Email: ${answers.email}<br>
 LinkedIn Url: ${answers.linkedinUrl}<br>,
 
+## Tests
 
 ## License
 ${answers.license}
