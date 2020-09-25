@@ -97,7 +97,7 @@ ${answers.contributions}
 
 ## Questions
 If you would like to reach out to me, here are my contact information:<br> 
-GitHub: [${answers.gitHubUser}](<br>
+GitHub: ${answers.gitHubUser}<br>
 Email: ${answers.email}<br>
 LinkedIn Url: ${answers.linkedinUrl}<br>
 
@@ -116,7 +116,7 @@ promptUser()
     then(function (answers) {
         const readMe = generateMarkdown(answers);
 
-        return writeFileAsync("ReadMe.md", readMe);
+        return writeFileAsync("GeneratedReadMe.md", readMe);
     })
     .then(function () {
         console.log("Wrote ReadMe successfully");
