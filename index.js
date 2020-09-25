@@ -12,6 +12,12 @@ function promptUser(answers) {
             name: "title",
             message: "What would you like to name your ReadMe?",
         },
+        
+        {   
+            type: "input",
+            name: "name",
+            message: "What is your name?",
+        },
 
         {   
             type: "input",
@@ -44,8 +50,23 @@ function promptUser(answers) {
             message: "What license are you using?",
             choices: [ "MIT", "ISC"]
 
-        }
+        },
 
+        {   
+            type: "input",
+            name: "gitHubUser",
+            message: "What is your GitHub username?",
+        },
+        {   
+            type: "input",
+            name: "email",
+            message: "What is your Email?",
+        },
+        {   
+            type: "input",
+            name: "linkedinUrl",
+            message: "What is your LinkedIn url?",
+        },
 
     ]);
 }
@@ -58,6 +79,7 @@ return `# [Title]
 - [Usage](#usage)
 - [Contributions](#contributions)
 - [License](#license) 
+- [Questions](#questions)
     
 ## Description
 ${answers.description}
@@ -72,9 +94,20 @@ ${answers.usage}
 ## Contribution
 ${answers.contributions}
 
+## Questions
+If you would like to reach out to me, here are my contact informatioon: 
+GitHub username: [${answers.gitHubUser}](</n>
+Email: ${answers.email}</n>
+LinkedIn Url: ${answers.linkedinUrl}</n>,
+
 
 ## License
-${answers.license}`}
+${answers.license}
+Copyright (c) [2020] </n>
+[${answers.name}]
+
+`}
+
 
 promptUser()
     .
