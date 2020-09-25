@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Longhuynh741/GT-FT-ReadMe-Generator/issues"
   },
-  "homepage": "https://github.com/Longhuynh741/GT-FT-ReadMe-Generator#readme"
+  "homepage": "https://github.com/Longhuynh741/GT-FT-ReadMe-Generator#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "inquirer": "^7.3.3"
+  }
 }
